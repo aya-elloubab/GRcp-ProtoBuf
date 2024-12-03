@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/modern_background"
+    android:padding="16dp">
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:id="@+id/inputs_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="24dp"
+        android:elevation="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/tv_title">
+
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/hint_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Currency From -->
+        <EditText
+            android:id="@+id/et_currency_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From (e.g., USD)"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/hint_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Currency To -->
+        <EditText
+            android:id="@+id/et_currency_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To (e.g., EUR)"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/hint_text"
+       />
+    </LinearLayout>
+
+    <!-- Convert Button -->
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputs_container"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/primary_text"
+        android:background="@color/button_color"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="32dp"
+        android:elevation="6dp" />
+
+    <!-- Result Section -->
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/btn_convert"
+        android:layout_centerHorizontal="true"
+        android:text="Converted Amount: "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/result_background"
+        android:padding="16dp"
+        android:textColor="@color/primary_text"
+ />
+</RelativeLayout>
